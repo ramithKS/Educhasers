@@ -9,7 +9,7 @@
   justify-content: flex-end;
   align-items: center;
   padding: 7px 8%;
-  background: #273445
+  background: #273445;
 }
 .first-sec
 {
@@ -750,7 +750,7 @@ End of Testimonials */
 
 .phonenumber:before {
   left: 22px;
-  line-height: 90px;
+  line-height: 85px;
   content: "+91";
   font-size: 20px;
   color: #222;
