@@ -10,6 +10,7 @@
   align-items: center;
   padding: 7px 8%;
   background: #273445;
+  
 }
 .first-sec
 {
@@ -841,9 +842,9 @@ End of Testimonials */
   border-radius:100%;
   background-color:#33353d
 }
-.copyright-text
+.copyright-text .row
 {
-  margin:0
+   padding-left: -90px;;
 }
 @media (max-width:991px)
 {
