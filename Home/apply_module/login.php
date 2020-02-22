@@ -21,7 +21,7 @@ if(isset($_POST['login-btn'])) {
         if(password_verify($password, $hashed_password)) {
           $_SESSION['id'] = $id;
           $_SESSION['email'] = $email;
-          header('location: dashboard.php');
+          header('location: apply_dash/dashboard.php');
         }
         else {
           echo "Error: Invalid username or password";
