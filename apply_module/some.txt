@@ -1,0 +1,102 @@
+1) DB Connect
+<?php
+
+$username = 'root';
+$password = 'dbmsProject';
+$dsn = 'mysql:host=localhost; dbname=mydb';
+
+try {
+
+  $conn = new PDO($dsn, $username, $password);
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+} catch (PDOException $e) {
+
+  echo "Fail to connect to the database ".$e->getMessage();
+
+}
+
+?>
+
+
+
+2)Signup
+
+<?php
+
+require_once 'source/db_connect.php';
+
+if(isset($_POST['signup-btn'])) {
+
+      $username = $_POST['user-name'];
+      $email = $_POST['user-email'];
+      $password = $_POST['user-pass'];
+
+      $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    try {
+      $SQLInsert = "INSERT INTO users (username, email, password,  to_date)
+                   VALUES (:username,  :email, :password, now())";
+
+      $statement = $conn->prepare($SQLInsert);
+      $statement->execute(array(':username' => $username, ':email' => $email, ':password' => $hashed_password));
+
+      if($statement->rowCount() == 1) {
+        header('location: apply.html');
+      }
+    }
+    catch (PDOException $e) {
+      echo "Error: " . $e->getMessage();
+    }
+
+}
+
+?>
+
+
+3. Login
+
+<?php
+
+require_once 'source/session.php';
+require_once 'source/db_connect.php';
+
+if(isset($_POST['login-btn'])) {
+
+    $email = $_POST['user-email'];
+    $password = $_POST['user-pass'];
+
+    try {
+      $SQLQuery = "SELECT * FROM users WHERE email = :email";
+      $statement = $conn->prepare($SQLQuery);
+      $statement->execute(array(':email' => $email));
+
+      while($row = $statement->fetch()) {
+        $id = $row['id'];
+        $hashed_password = $row['password'];
+        $username = $row['email'];
+
+        if(password_verify($password, $hashed_password)) {
+          $_SESSION['id'] = $id;
+          $_SESSION['email'] = $email;
+          header('location: apply_dash/dashboard.php');
+        }
+        else {
+          echo "Error: Invalid username or password";
+        }
+      }
+    }
+    catch (PDOException $e) {
+      echo "Error: " . $e->getMessage();
+    }
+
+}
+
+?>
+
+4. session
+<?php
+
+session_start();
+
+?>
