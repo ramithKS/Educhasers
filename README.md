@@ -13,3 +13,4 @@ To lone this repository,
 ```
 git clone https://github.com/ramithKS/Educhasers.git
 ```
+##### Final Project report can be found in project's [Wiki](http://educhasers.xyz/)
