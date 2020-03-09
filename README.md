@@ -5,3 +5,11 @@
 * [Ashrrith Karunakar](https://github.com/ashrrithk/)
 * [Harshavardhana Y](https://github.com/Harsha3205)
 * [Nikil J Guptha](https://github.com/)
+
+## Getting Started
+Our website was hosted live [here](http://educhasers.xyz/)
+
+To lone this repository,
+```
+git clone https://github.com/ramithKS/Educhasers.git
+```
