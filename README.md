@@ -2,5 +2,5 @@ Educhasers is a concept website for a free coaching institute for JEE and NEET. 
 ## Project Contributors
 * [Ramith K S](https://github.com/ramithKS/)
 * [Ashrrith Karunakar](https://github.com/ashrrithk/)
-* [Ramith K hrith](https://github.com/ramithKS/)
-* [Ramith K S](https://github.com/ramithKS/)
+* [Nikil]()
+* [Harsha]()
