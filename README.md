@@ -4,12 +4,12 @@
 * [Ramith K S](https://github.com/ramithKS/)
 * [Ashrrith Karunakar](https://github.com/ashrrithk/)
 * [Harshavardhana Y](https://github.com/Harsha3205)
-* [Nikil J Guptha](https://github.com/)
+* [Nikil J Guptha](https://github.com/NikhiLVG)
 
 ## Getting Started
 Our website was hosted live [here](http://educhasers.xyz/)
 
-To lone this repository,
+To clone this repository,
 ```
 git clone https://github.com/ramithKS/Educhasers.git
 ```
